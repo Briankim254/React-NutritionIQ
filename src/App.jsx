@@ -8,6 +8,9 @@ import SignupForm from "./pages/SignUp";
 import NotFoundPage from "./pages/errorPage";
 import ContactPage from "./pages/Contact";
 import Team from "./pages/Team";
+import StartPage from "./pages/start";
+import EndPage from "./pages/EndPage";
+
 
 export default function App() {
   return (
@@ -20,6 +23,8 @@ export default function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/startquiz" element={<StartPage />} />
+        <Route path="/endquiz" element={<EndPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>

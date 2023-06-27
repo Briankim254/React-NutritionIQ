@@ -40,8 +40,8 @@ const LandingPage = () => {
             </p>
             <div className="flex items-center gap-6">
               <button
-                onClick={() => navigate("/quiz")}
-                className="inline-flex items-center justify-center h-12 px-6  font-medium tracking-wide text-white  rounded-xl shadow-xl bg-blue-800 hover:bg-blue-700 focus:shadow-outline focus:outline-none"
+                onClick={() => navigate("/startquiz")}
+                className="inline-flex items-center shadow-xl  justify-center h-12 px-6  font-medium tracking-wide text-white  rounded-xl  bg-blue-800 hover:bg-blue-700 focus:shadow-outline focus:outline-none"
               >
                 Take Quiz
               </button>

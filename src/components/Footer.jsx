@@ -11,9 +11,9 @@ const FooterNav = () => {
           </h1>
 
           <div className="mt-6 md:mx-3 shrink-0 md:mt-0 md:w-auto">
-            <a
+            <button
               href="#"
-              className="inline-flex items-center justify-center w-full px-4 py-2 text-sm text-white duration-300 bg-blue-800 rounded-lg gap-x-3 hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80"
+              className="inline-flex shadow-xl items-center justify-center w-full px-4 py-2 text-sm text-white duration-300 bg-blue-800 rounded-lg gap-x-3 hover:bg-blue-700 focus:ring focus:ring-blue-300 focus:ring-opacity-80"
             >
               <span>Sign Up Now</span>
 
@@ -31,7 +31,7 @@ const FooterNav = () => {
                   d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
                 />
               </svg>
-            </a>
+            </button>
           </div>
         </div>
 
@@ -125,7 +125,7 @@ const FooterNav = () => {
                 href="#"
                 className="text-gray-600 transition-colors duration-300   hover:underline hover:text-blue-800"
               >
-                Nutrition@kabarak.ac.ke
+                nutrition@kabarak.ac.ke
               </a>
             </div>
           </div>
