@@ -1,7 +1,5 @@
 ## Friendly Description: 🌱🍎 Nutrition IQ Web Application 🥦📊
 
-Welcome to the Nutrition IQ web application repository! 🎉 This is a fantastic React frontend web app that empowers you to make informed dietary choices and track your nutrition like never before! 🍽️📈
-
 With Nutrition IQ, you'll discover a user-friendly interface that makes it easy to stay on top of your nutritional goals and embrace a healthier lifestyle. 🌿✨ The app combines the power of React, the flexibility of Tailwind CSS, and the seamless navigation of React Router DOM to provide you with a delightful experience. 🚀💻
 
 Track your daily intake, monitor your macros, explore nutrient-rich recipes, and gain valuable insights into healthy eating habits—all in one convenient place! 📚🥗🔍 Nutrition IQ is here to support your journey to a more nourishing lifestyle. 💪💚
@@ -11,10 +9,6 @@ So, join us in this exciting adventure! Clone the repository, install the app, a
 Let's make nutrition a delightful journey with Nutrition IQ! 🥦🍎💚
 
 # Technical description: Nutrition IQ Web Application
-
-Welcome to the Nutrition IQ web application repository! This is a React frontend web app that helps users test their nutrition Smarts. It features a user-friendly interface, responsive design, and utilizes the Tailwind CSS framework for styling. The app also incorporates React Router DOM for navigation and routing between different pages.
-
-🥦📊🍎
 
 ## Prerequisites
 
