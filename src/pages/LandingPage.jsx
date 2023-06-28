@@ -2,6 +2,8 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import FooterNav from "../components/Footer";
 import { useNavigate, Link } from "react-router-dom";
+import Lottie from "lottie-react";
+import animationdata from "../assets/116568-comunnity-manager.json";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -16,32 +18,22 @@ const LandingPage = () => {
               alt=""
               className="object-cover w-full lg:absolute h-80 lg:h-full"
             />
-            <svg
-              className="absolute top-0 right-0 hidden h-full text-white lg:inline-block"
-              viewBox="0 0 20 104"
-              fill="currentColor"
-            >
-              <polygon points="17.3036738 5.68434189e-14 20 5.68434189e-14 20 104 0.824555778 104" />
-            </svg>
+            
           </div>
           <div className="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
-            <div>
-              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-blue-800 uppercase rounded-full bg-teal-accent-400">
-                Elevate Your Health
-              </p>
-            </div>
-            <h5 className="mb-3 text-3xl font-extrabold leading-none sm:text-xl">
-              Unlock Your Nutritional Potential with Nutrition IQ.
+           
+            <h5 className="mb-3 text-3xl font-semibold  text-gray-800  lg:text-4xl  leading-none sm:text-xl">
+               Elevate Your Health
             </h5>
             <p className="mb-5 text-gray-800">
-              <span className="font-bold">Join our community</span> of diabetics
+              <span className="font-bold text-blue-800">Unlock Your Nutritional Potential </span> together with a of diabetics
               who are living healthier, happier lives with the help of our
               nutrition web app.
             </p>
             <div className="flex items-center gap-6">
               <button
                 onClick={() => navigate("/startquiz")}
-                className="inline-flex items-center shadow-xl  justify-center h-12 px-6  font-medium tracking-wide text-white  rounded-xl  bg-blue-800 hover:bg-blue-700 focus:shadow-outline focus:outline-none"
+                className=" px-6 py-2.5  text-sm font-medium leading-5 text-center text-white capitalize bg-blue-800 rounded-lg hover:bg-blue-700 lg:mx-0 lg:w-auto focus:outline-none"
               >
                 Take Quiz
               </button>
@@ -63,6 +55,23 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+      <div className="bg-white mb-6 ">
+      <div className="container flex flex-col px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
+        <div className="flex flex-col items-center w-full lg:flex-row lg:w-1/2">
+          
+          <div className="max-w-lg lg:mx-12 lg:order-2">
+            <h1 className="text-3xl font-semibold  text-gray-800  lg:text-4xl">Join the Diabetic Nutrition <b className="text-blue-800">Forum</b></h1>
+            <p className="mt-4 text-gray-600 ">Discover a supportive network and share valuable insights on diabetic nutrition. Connect with experts and fellow individuals managing diabetes to learn and support each other on your journey.</p>
+            <div className="mt-6">
+              <Link to="/forum" className="px-6 py-2.5 mt-6 text-sm font-medium leading-5 text-center text-white capitalize bg-blue-800 rounded-lg hover:bg-blue-700 lg:mx-0 lg:w-auto focus:outline-none">Check out Forum</Link>
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center justify-center w-full h-96 lg:w-1/2">
+        <Lottie loop={false} animationData={animationdata} />
+        </div>
+      </div>
+    </div>
       <FooterNav />
     </>
   );

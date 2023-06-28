@@ -59,7 +59,7 @@ const StartPage = () => {
 
               <button
                 onClick={() => navigate("/quiz")}
-                className=" inline-flex justify-center items-center gap-2 w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-700  transform bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 rounded-lg lg:w-auto hover:gap-6 focus:outline-none focus:bg-blue-700"
+                className=" inline-flex justify-center items-center gap-2 w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-all delay-150 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 rounded-lg lg:w-auto hover:gap-6 duration-500    transform  focus:outline-none focus:bg-blue-700"
               >
                 Start Now
                 <svg

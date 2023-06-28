@@ -1,97 +1,150 @@
-import React from "react";
-import Logo from "../components/logo";
+import React from 'react';
+import Lottie from "lottie-react";
+import animationdata from "../assets/116568-comunnity-manager.json";
 
 const SignupForm = () => {
   return (
-    <div className="h-screen flex items-center justify-center">
-      <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md hover:shadow-xl">
-        <div className="flex justify-center mx-auto">
-          <Logo/>
-        </div>
+    <section className="bg-white ">
+      <div className="flex justify-center min-h-screen">
+        <div
+          className="hidden bg-cover lg:block lg:w-2/5"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1494621930069-4fd4b2e24a11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80')",
+          }}
+        ></div>
 
-        <form className="mt-6">
-          <div>
-            <label htmlFor="username" className="block text-sm text-gray-800">
-              Username
-            </label>
-            <input
-              type="text"
-              className="required:border-red-500  shadow-sm hover:shadow-md block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-            />
-          </div>
+        <div className="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
+          <div className="w-full">
+            <h1 className="text-2xl font-semibold tracking-wider text-gray-800 capitalize">
+              Get your free account now.
+            </h1>
 
-          <div className="mt-4">
-            <div className="flex items-center justify-between">
-              <label htmlFor="password" className="block text-sm text-gray-800">
-                Password
-              </label>
-              <a
-                href="#"
-                className="shadow-sm hover:shadow-md text-xs text-gray-600 hover:underline"
-              >
-                Forget Password?
-              </a>
+            <p className="mt-4 text-gray-500 ">
+              Let’s get you all set up so you can verify your personal account and begin setting up your profile.
+            </p>
+
+            <div className="mt-6">
+              <h1 className="text-gray-500 dark:text-gray-300">Select type of account</h1>
+
+              <div className="mt-3 md:flex md:items-center md:-mx-2">
+                <button className="flex justify-center w-full px-6 py-3 text-white bg-blue-500 rounded-md md:w-auto md:mx-2 focus:outline-none">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+
+                  <span className="mx-2">client</span>
+                </button>
+
+                <button className="flex justify-center w-full px-6 py-3 mt-4 text-blue-500 border border-blue-500 rounded-md md:mt-0 md:w-auto md:mx-2focus:outline-none">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
+                  </svg>
+
+                  <span className="mx-2">worker</span>
+                </button>
+              </div>
             </div>
 
-            <input
-              type="password"
-              className="required:border-red-500  shadow-sm hover:shadow-md block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-            />
+            <form className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
+              <div>
+                <label className="block mb-2 text-sm text-gray-600 ">First Name</label>
+                <input
+                  type="text"
+                  placeholder="John"
+                  className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md    -700 focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm text-gray-600 ">Last name</label>
+                <input
+                  type="text"
+                  placeholder="Snow"
+                  className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md    -700 focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm text-gray-600 ">Phone number</label>
+                <input
+                  type="text"
+                  placeholder="XXX-XX-XXXX-XXX"
+                  className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md    -700 focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm text-gray-600 ">Email address</label>
+                <input
+                  type="email"
+                  placeholder="johnsnow@example.com"
+                  className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md    -700 focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm text-gray-600 ">Password</label>
+                <input
+                  type="password"
+                  placeholder="Enter your password"
+                  className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md    -700 focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm text-gray-600 ">Confirm password</label>
+                <input
+                  type="password"
+                  placeholder="Enter your password"
+                  className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md    -700 focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                />
+              </div>
+
+              <button className="flex items-center justify-between w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                <span>Sign Up </span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5 rtl:-scale-x-100"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            </form>
           </div>
-
-          <div className="mt-6">
-            <button className="w-full px-6 py-2.5 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-800 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
-              Sign Up
-            </button>
-          </div>
-        </form>
-
-        <div className="flex items-center justify-between mt-4">
-          <span className="w-1/5 border-b lg:w-1/5"></span>
-
-          <a
-            href="#"
-            className="text-xs text-center text-gray-500 uppercase hover:underline"
-          >
-            or
-          </a>
-
-          <span className="w-1/5 border-b lg:w-1/5"></span>
         </div>
-
-        <div className="flex items-center mt-6 -mx-2">
-          <button
-            type="button"
-            className="flex items-center justify-center w-full px-6 py-2 mx-2 text-sm font-medium text-white transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:bg-blue-400 focus:outline-none"
-          >
-            <svg className="w-4 h-4 mx-2 fill-current" viewBox="0 0 24 24">
-              <path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"></path>
-            </svg>
-
-            <span className="hidden mx-2 sm:inline">
-              Sign up with Google
-            </span>
-          </button>
-
-          <a
-            href="#"
-            className="p-2 mx-2 text-sm font-medium text-gray-500 transition-colors duration-300 transform bg-gray-300 rounded-lg hover:bg-gray-200"
-          >
-            <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"></path>
-            </svg>
-          </a>
-        </div>
-
-        <p className="mt-8 text-xs font-light text-center text-gray-400">
-          Already have an account?{" "}
-          <a href="#" className="font-medium text-gray-700 hover:underline">
-            Sign In
-          </a>
-        </p>
       </div>
-    </div>
+    </section>
   );
-};
+}
 
 export default SignupForm;

@@ -1,7 +1,8 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 const FooterNav = () => {
+  const navigate = useNavigate();
   return (
     <footer className="bg-white ">
       <div className="container px-6 py-12 mx-auto">
@@ -12,7 +13,7 @@ const FooterNav = () => {
 
           <div className="mt-6 md:mx-3 shrink-0 md:mt-0 md:w-auto">
             <button
-              href="#"
+              onClick={()=>navigate('/newsletter')}
               className="inline-flex shadow-xl items-center justify-center w-full px-4 py-2 text-sm text-white duration-300 bg-blue-800 rounded-lg gap-x-3 hover:bg-blue-700 focus:ring focus:ring-blue-300 focus:ring-opacity-80"
             >
               <span>Sign Up Now</span>

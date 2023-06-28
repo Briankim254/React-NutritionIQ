@@ -12,6 +12,7 @@ import Team from "./pages/Team";
 import StartPage from "./pages/start";
 import EndPage from "./pages/EndPage";
 import QuizComponent from "./pages/quizcomponent";
+import NewsletterSection from "./pages/newsletter";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/startquiz" element={<StartPage />} />
         <Route path="/endquiz/:score" element={<EndPage />} />
+        <Route path="/newsletter" element={<NewsletterSection />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>

@@ -146,3 +146,5 @@ const QuizPage = () => {
 };
 
 export default QuizPage;
+
+// {isAnswerCorrect ? "Correct!" : "Wrong!"}
