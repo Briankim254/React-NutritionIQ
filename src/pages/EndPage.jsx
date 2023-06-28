@@ -1,12 +1,13 @@
 import React from "react";
 import { Tooltip } from "react-tooltip";
-import { useNavigate } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 import Logo from "../components/logo";
 import Lottie from "lottie-react";
 import animationdata from "../assets/59344-congratulation-badge-animation.json";
 
 const EndPage = () => {
   const navigate = useNavigate();
+  const { score } = useParams();
   return (
     <>
       <nav className="border-t-4 border-blue-800">
@@ -42,13 +43,13 @@ const EndPage = () => {
       <div className="container px-6 py-5 mx-auto">
         <div className="items-center lg:flex">
           <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
-            <Lottie loop={false} animationData={animationdata} />
+            <Lottie loop={true} animationData={animationdata} />
           </div>
           <div className=" w-full lg:w-1/2">
             <div className=" flex-col lg:justify-center lg:max-w-lg">
               <h1 className="text-3xl font-semibold  text-center text-gray-800  lg:text-4xl">
                 Congratulations! you have scored{" "}
-                <b className="text-blue-800">4 out of 5</b> on the quiz! 🎉
+                <b className="text-blue-800">{score} out of 4</b> on the quiz! 🎉
               </h1>
 
               <p className="mt-3 text-center text-gray-800 ">
@@ -63,13 +64,13 @@ const EndPage = () => {
               </p>
               <div className="flex justify-center items-center gap-5">
                 <button
-                  onClick={() => navigate("/quiz")}
+                  onClick={() => navigate("/startquiz")}
                   className="w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-700  transform bg-gradient-to-br from-yellow-400 to-pink-500 hover:from-emerald-500 hover:to-blue-500 rounded-lg lg:w-auto  focus:outline-none focus:bg-blue-700"
                 >
                   Retry Quiz
                 </button>
                 <button
-                  onClick={() => navigate("/quiz")}
+                  onClick={() => navigate("/forum")}
                   className="w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-700  transform bg-gradient-to-br from-pink-500 via-purple-500 to bg-blue-800 hover:from-blue-500 hover:to-emerald-500 rounded-lg lg:w-auto  focus:outline-none focus:bg-blue-700"
                 >
                   Visit Forum
