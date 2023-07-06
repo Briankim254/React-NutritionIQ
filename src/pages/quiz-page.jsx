@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import BackButton from "../components/BackBtn";
 import createClient from "@sanity/client";
 import client from "../client";
+import Loading from "../components/loading";
 
 const QuizPage = () => {
   const navigate = useNavigate();
@@ -97,23 +98,35 @@ const QuizPage = () => {
                 <>
                   <div>
                     <p className="text-center text-xl">
-                      Your answer: {currentQuestion.answers[userAnswers[currentQuestionIndex]]}
+                      Your answer:{" "}
+                      {
+                        currentQuestion.answers[
+                          userAnswers[currentQuestionIndex]
+                        ]
+                      }
                     </p>
                   </div>
                   <div>
                     <p className="text-center text-xl">
-                      Correct answer: {currentQuestion.answers[currentQuestion.correctAnswerIndex]}
+                      Correct answer:{" "}
+                      {
+                        currentQuestion.answers[
+                          currentQuestion.correctAnswerIndex
+                        ]
+                      }
                     </p>
                   </div>
                   <div>
-                    <p className="text-center text-xl">Explanation: {currentQuestion.explanation}</p>
+                    <p className="text-center text-xl">
+                      Explanation: {currentQuestion.explanation}
+                    </p>
                   </div>
                 </>
               )}
               {userAnswers.length <= currentQuestionIndex && (
                 <ul className="space-y-5  p-4">
                   {currentQuestion.answers.map((answer, index) => (
-                    <li className="flex items-center justify-center px-2 py-3" key={index}>
+                    <li className="px-2 py-3" key={index}>
                       <label>
                         <input
                           type="radio"
@@ -132,7 +145,9 @@ const QuizPage = () => {
                   onClick={handleNextQuestion}
                   className="px-5 py-2 m-3 text-sm tracking-wider text-white uppercase transition-colors duration-700 transform bg-blue-800 rounded-lg lg:w-auto focus:outline-none focus:bg-blue-700"
                 >
-                    {currentQuestionIndex < questions.length - 1 ? "Next Question" : "Finish Quiz"}
+                  {currentQuestionIndex < questions.length - 1
+                    ? "Next"
+                    : "Finish Quiz"}
                 </button>
               </div>
             </div>
@@ -142,9 +157,12 @@ const QuizPage = () => {
     );
   };
 
-  return <div>{questions.length > 0 ? renderCurrentQuestion() : <p>Loading...</p>}</div>;
+  return (
+    <div>{questions.length > 0 ? renderCurrentQuestion() : <Loading />}</div>
+  );
 };
 
 export default QuizPage;
 
 // {isAnswerCorrect ? "Correct!" : "Wrong!"}
+// {currentQuestionIndex < questions.length - 1 ? "Next Question" : "Finish Quiz"}

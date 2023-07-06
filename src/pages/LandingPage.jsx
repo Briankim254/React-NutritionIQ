@@ -1,6 +1,4 @@
 import React from "react";
-import Navigation from "../components/Navigation";
-import FooterNav from "../components/Footer";
 import { useNavigate, Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import animationdata from "../assets/116568-comunnity-manager.json";
@@ -9,7 +7,7 @@ const LandingPage = () => {
   const navigate = useNavigate();
   return (
     <>
-      <Navigation />
+   
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="flex flex-col max-w-screen-lg overflow-hidden bg-slate-800 rounded shadow-sm lg:flex-row sm:mx-auto">
           <div className="relative lg:w-1/2">
@@ -68,11 +66,11 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="flex items-center justify-center w-full h-96 lg:w-1/2">
-        <Lottie loop={false} animationData={animationdata} />
+        <Lottie style={{height:"700px", width:"700"}} loop={false} animationData={animationdata} />
         </div>
       </div>
     </div>
-      <FooterNav />
+     
     </>
   );
 };

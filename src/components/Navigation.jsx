@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../components/logo";
 
 const Navigation = () => {
@@ -43,30 +43,30 @@ const Navigation = () => {
               isOpen ? "flex" : "hidden"
             }`}
           >
-            <Link
-              className="px-4 py-2 mt-2 text-sm text-gray-800 md:mt-0 hover:text-blue-800 focus:outline-none focus:shadow-outline"
+            <NavLink
+              className="px-4 py-2 mt-2 active:text-blue-800 text-sm text-gray-800 md:mt-0 hover:text-blue-800 focus:outline-none focus:shadow-outline active:border-b-2 active:border-blue-800"
               to="/"
             >
               Home
-            </Link>
-            <Link
-              className="px-4 py-2 mt-2 text-sm text-gray-800 md:mt-0 hover:text-blue-800 focus:outline-none focus:shadow-outline"
+            </NavLink>
+            <NavLink
+              className="px-4 py-2 mt-2  active:text-blue-800 text-sm text-gray-800 md:mt-0 hover:text-blue-800 focus:outline-none active:border-b-2 active:border-blue-800  focus:shadow-outline"
               to="/team"
             >
               Team
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/contact"
-              className="px-4 py-2 mt-2 text-sm text-gray-800 md:mt-0 hover:text-blue-800 focus:outline-none focus:shadow-outline"
+              className="px-4 py-2 mt-2 text-sm active:text-blue-800  text-gray-800 md:mt-0 hover:text-blue-800 focus:outline-none focus:shadow-outline active:border-b-2 active:border-blue-800"
             >
               Contact
-            </Link>
-            <Link
-              className="px-4 py-2 mt-2 text-sm text-gray-800 md:mt-0 hover:text-blue-800 focus:outline-none focus:shadow-outline"
+            </NavLink>
+            <NavLink
+              className="px-4 py-2 mt-2 text-sm text-gray-800 md:mt-0 hover:text-blue-800 focus:outline-none focus:shadow-outline active:border-b-2 active:border-blue-800"
               to="/forum"
             >
               Community
-            </Link>
+            </NavLink>
 
             <div className="inline-flex items-center gap-2 list-none lg:ml-auto">
               <button

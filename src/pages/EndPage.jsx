@@ -3,7 +3,7 @@ import { Tooltip } from "react-tooltip";
 import { useParams,useNavigate } from "react-router-dom";
 import Logo from "../components/logo";
 import Lottie from "lottie-react";
-import animationdata from "../assets/59344-congratulation-badge-animation.json";
+import animationdata from "../assets/congratulations-page.json";
 
 const EndPage = () => {
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ const EndPage = () => {
       <div className="container px-6 py-5 mx-auto">
         <div className="items-center lg:flex">
           <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
-            <Lottie loop={true} animationData={animationdata} />
+            <Lottie loop={false} animationData={animationdata} />
           </div>
           <div className=" w-full lg:w-1/2">
             <div className=" flex-col lg:justify-center lg:max-w-lg">
