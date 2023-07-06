@@ -1,6 +1,6 @@
 import React from "react";
 import { Tooltip } from "react-tooltip";
-import { useParams,useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Logo from "../components/logo";
 import Lottie from "lottie-react";
 import animationdata from "../assets/congratulations-page.json";
@@ -43,13 +43,18 @@ const EndPage = () => {
       <div className="container px-6 py-5 mx-auto">
         <div className="items-center lg:flex">
           <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
-            <Lottie loop={false} animationData={animationdata} />
+            <Lottie
+              loop={false}
+              style={{ height: "520px", width: "500px" }}
+              animationData={animationdata}
+            />
           </div>
           <div className=" w-full lg:w-1/2">
             <div className=" flex-col lg:justify-center lg:max-w-lg">
               <h1 className="text-3xl font-semibold  text-center text-gray-800  lg:text-4xl">
                 Congratulations! you have scored{" "}
-                <b className="text-blue-800">{score} out of 4</b> on the quiz! 🎉
+                <b className="text-blue-800">{score} out of 4</b> on the quiz!<br/> 
+                🎉
               </h1>
 
               <p className="mt-3 text-center text-gray-800 ">
