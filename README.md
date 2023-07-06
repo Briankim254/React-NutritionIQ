@@ -60,11 +60,11 @@ yarn install
 5. Start the development server.
 
 ```shell
-npm start dev
+npm run dev
 ```
 or
 ```shell
-yarn start dev
+yarn run dev
 ```
 
 6. Open your web browser and visit `http://localhost:3000` to see the Nutrition IQ web application in action!
