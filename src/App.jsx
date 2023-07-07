@@ -19,8 +19,8 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route  path="/" element={<SharredLayout />}>
-          <Route index element={<LandingPage />}/>
+        <Route path="/" element={<SharredLayout />}>
+          <Route index element={<LandingPage />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>
