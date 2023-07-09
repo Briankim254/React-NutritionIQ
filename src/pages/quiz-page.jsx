@@ -55,7 +55,7 @@ const QuizPage = () => {
   const handleAnswerSubmission = (selectedAnswerIndex) => {
     const currentQuestion = questions[currentQuestionIndex];
     const correctAnswerIndex = currentQuestion.correctAnswerIndex;
-
+    const isAnswerCorrect = selectedAnswerIndex === correctAnswerIndex;
     setUserAnswers([...userAnswers, selectedAnswerIndex]);
 
     if (selectedAnswerIndex === correctAnswerIndex) {
@@ -93,19 +93,10 @@ const QuizPage = () => {
                 </p>
               </div>
             </div>
-            <div className=" flex flex-col gap-4 justify-center h-4/5 w-3/5 items-center rounded-lg sm:w-1/2">
+            <div className=" flex flex-col gap-4 justify-center h-4/5 w-3/5 items-center rounded-lg sm:w-full">
               {userAnswers.length > currentQuestionIndex && (
                 <>
-                  <div>
-                    <p className="text-center text-xl">
-                      Your answer:{" "}
-                      {
-                        currentQuestion.answers[
-                          userAnswers[currentQuestionIndex]
-                        ]
-                      }
-                    </p>
-                  </div>
+                  {isAnswerCorrect ? <p className=""> Correct!</p> : <p className=""> Wrong!</p>}
                   <div>
                     <p className="text-center text-xl">
                       Correct answer:{" "}

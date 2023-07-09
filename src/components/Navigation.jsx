@@ -1,13 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../components/logo";
+import { GoogleLogin } from "@react-oauth/google";
+import jwtDecode from "jwt-decode";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [Isdown, setIsdown] = useState(false);
+  const [User, setUser] = useState(null);
   const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const toggleDropdown = () => {
+    setIsdown(!Isdown);
+  };
+
+  const handleClickOutside = (event) => {
+    if (!event.target.closest(".Navigation")) {
+      setIsdown(false);
+    }
   };
 
   return (
@@ -67,22 +81,79 @@ const Navigation = () => {
             >
               Community
             </NavLink>
-
-            <button
-                type="button"
-                className="flex items-center focus:outline-none"
-                aria-label="toggle profile dropdown"
+            {User ? (
+              <div
+                className="dropdown-menu relative inline-block"
+                onClick={handleClickOutside}
               >
-                <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
-                  <img
-                    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
-                    className="object-cover w-full h-full"
-                    alt="avatar"
-                  />
-                </div>
+                {/* Dropdown toggle button */}
+                <button
+                  type="button"
+                  onClick={toggleMenu}
+                  className="flex items-center focus:outline-none"
+                  aria-label="toggle profile dropdown"
+                >
+                  <div className="w-8 h-8 overflow-hidden border-2 border-blue-800 rounded-full">
+                    <img
+                      src={User.picture}
+                      className="object-cover w-full h-full"
+                      alt="avatar"
+                    />
+                  </div>
 
-                <h3 className="mx-2 text-gray-700  lg:hidden">Khatab wedaa</h3>
-              </button>
+                  <h3 className="mx-2 text-gray-700  lg:hidden">
+                    {User.email}
+                  </h3>
+                </button>
+
+                {/* Dropdown menu */}
+                {isOpen && (
+                  <div
+                    onClick={() => setIsOpen(false)}
+                    className="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl "
+                  >
+                    <a onClick={()=>navigate("/Profile")} className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 ">
+                      your profile
+                    </a>
+
+                    <a
+                      onClick={() => navigate("/contact")}
+                      className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 "
+                    >
+                      Help
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 "
+                    >
+                      Settings
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 "
+                    >
+                      Sign Out
+                    </a>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <button
+              onClick={() => navigate("/login")}
+              className=" px-6 py-2.5  text-sm font-medium shadow-lg leading-5 text-center text-white capitalize bg-blue-800 rounded-lg hover:bg-blue-700 lg:mx-0 lg:w-auto focus:outline-none"
+            >
+              Sign in
+            </button>
+              //   <GoogleLogin
+              //   onSuccess={(credentialResponse) => {
+              //     const data = jwtDecode(credentialResponse.credential);
+              //     setUser(data);
+              //   }}
+              //   onError={() => {
+              //     console.log("Login Failed");
+              //   }}
+              // />
+            )}
           </nav>
         </div>
       </div>

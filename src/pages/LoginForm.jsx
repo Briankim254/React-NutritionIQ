@@ -26,7 +26,6 @@ const LoginForm = () => {
               onSuccess={(credentialResponse) => {
                 const data = jwtDecode(credentialResponse.credential);
                 setUser(data);
-                Navigate("/");
               }}
               onError={() => {
                 console.log("Login Failed");
