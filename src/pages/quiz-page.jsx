@@ -88,7 +88,7 @@ const QuizPage = () => {
             <BackButton />
           </div>
           <div className="flex flex-col md:flex-row gap-5">
-            <div className="flex-col space-y-5 justify-center bg-blue-800 shadow-xl shadow-blue-800 rounded-lg p-4 md:w-1/2 sm:w-3/4">
+            <div className="flex-col space-y-5 justify-center bg-blue-800 md:shadow-xl md:shadow-blue-800 rounded-lg p-4 md:w-1/2 sm:w-3/4">
               <div>
                 <p className="text-center py-2 px-3 text-gray-300 text-xl">
                   Question {currentQuestionIndex + 1}/{questions.length}
@@ -132,12 +132,12 @@ const QuizPage = () => {
                   {currentQuestion.answers.map((answer, index) => (
                     <li className="px-2 py-3" key={index}>
                       <label htmlFor={`answer-${index}`}>
-                        <div className="flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700">
+                        <div className="flex items-center pl-4 border border-gray-200 rounded ">
                           <input
                             id={`answer-${index}`}
                             type="radio"
                             name="answer"
-                            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  da focus:ring-2  "
                             onClick={() => handleAnswerSubmission(index)}
                           />
                           <span className="ml-2 text-xl">{answer}</span>
