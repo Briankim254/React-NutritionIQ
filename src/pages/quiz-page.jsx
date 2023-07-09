@@ -76,12 +76,12 @@ const QuizPage = () => {
 
     return (
       <div className="flex justify-center items-center h-screen bg-slate-100">
-        <div className="flex flex-col gap-4 w-9/12 shadow-2xl bg-white p-8 h-4/5 rounded-lg ">
+        <div className="flex flex-col gap-4 md:w-9/12 w-full shadow-2xl bg-white p-8 h-4/5 rounded-lg ">
           <div className="flex items-center m-6">
             <BackButton />
           </div>
           <div className="flex h-full content-center gap-5">
-            <div className="flex-col space-y-5 justify-center bg-blue-800 shadow-xl shadow-blue-800 rounded-lg h-3/4 w-2/5 ">
+            <div className="flex-col space-y-5 justify-center bg-blue-800 shadow-xl shadow-blue-800 rounded-lg h-3/4 w-2/5 sm:w-1/2 ">
               <div className="">
                 <p className="align-top text-center py-2 px-3 text-gray-300 text-xl">
                   Question {currentQuestionIndex + 1}/{questions.length}
@@ -93,7 +93,7 @@ const QuizPage = () => {
                 </p>
               </div>
             </div>
-            <div className=" flex flex-col gap-4 justify-center h-4/5 w-3/5 items-center rounded-lg">
+            <div className=" flex flex-col gap-4 justify-center h-4/5 w-3/5 items-center rounded-lg sm:w-1/2">
               {userAnswers.length > currentQuestionIndex && (
                 <>
                   <div>

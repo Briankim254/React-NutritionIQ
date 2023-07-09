@@ -68,20 +68,21 @@ const Navigation = () => {
               Community
             </NavLink>
 
-            <div className="inline-flex items-center gap-2 list-none lg:ml-auto">
-              <button
-                onClick={() => navigate("/login")}
-                className="items-center block px-10 py-2.5 text-base font-medium text-center text-blue-800 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-800"
+            <button
+                type="button"
+                className="flex items-center focus:outline-none"
+                aria-label="toggle profile dropdown"
               >
-                Sign in
+                <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+                    className="object-cover w-full h-full"
+                    alt="avatar"
+                  />
+                </div>
+
+                <h3 className="mx-2 text-gray-700  lg:hidden">Khatab wedaa</h3>
               </button>
-              <button
-                onClick={() => navigate("/signup")}
-                className="items-center shadow-blue-800 shadow-md block px-10 py-3 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-800 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
-              >
-                Sign up
-              </button>
-            </div>
           </nav>
         </div>
       </div>
