@@ -48,14 +48,14 @@ cd nutrition-iq
 3. Install the dependencies using a package manager such as npm or yarn.
 
 ```shell
-npm install
+npm i
 ```
 or
 ```shell
-yarn install
+yarn 
 ```
 
-4. Rename the `.env.example` file to `.env` and configure any necessary environment variables, such as API keys or database credentials.
+4. Rename the `.env.example` file to `.env` if avilable, and configure any necessary environment variables, such as API keys or database credentials.
 
 5. Start the development server.
 
@@ -64,10 +64,10 @@ npm run dev
 ```
 or
 ```shell
-yarn run dev
+yarn dev
 ```
 
-6. Open your web browser and visit `http://localhost:3000` to see the Nutrition IQ web application in action!
+6. Open your web browser and visit `http://localhost:5173` to see the Nutrition IQ web application in action!
 
 ## Usage
 
@@ -87,7 +87,7 @@ Contributions are welcome and greatly appreciated! If you have any suggestions, 
 git checkout -b feature/new-feature
 ```
 
-3. Make your changes and commit them with descriptive commit messages.
+3. Make your changes and commit them with descriptive commit messages.For example:
 
 ```shell
 git commit -m "Add new feature: Feature name"
@@ -95,7 +95,7 @@ git commit -m "Add new feature: Feature name"
 
 4. Push your changes to your forked repository.
 
-```
+```shell
 git push origin feature/new-feature
 ```
 
@@ -115,7 +115,7 @@ We would like to express our gratitude to the following resources:
 
 If you have any questions, feel free to reach out :
 
-- Kimutai Brian - bkmutai458@gmail.com
+- Kimutai Brian - kimutaibrian560@gmail.com
 
 
 ## License

@@ -19,6 +19,7 @@ const QuizPage = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -55,7 +56,13 @@ const QuizPage = () => {
   const handleAnswerSubmission = (selectedAnswerIndex) => {
     const currentQuestion = questions[currentQuestionIndex];
     const correctAnswerIndex = currentQuestion.correctAnswerIndex;
-    const isAnswerCorrect = selectedAnswerIndex === correctAnswerIndex;
+    
+    if (selectedAnswerIndex === correctAnswerIndex) {
+      setIsAnswerCorrect(true);
+    } else {
+      setIsAnswerCorrect(false);
+    }
+
     setUserAnswers([...userAnswers, selectedAnswerIndex]);
 
     if (selectedAnswerIndex === correctAnswerIndex) {
@@ -96,10 +103,10 @@ const QuizPage = () => {
             <div className=" flex flex-col gap-4 justify-center h-4/5 w-3/5 items-center rounded-lg sm:w-full">
               {userAnswers.length > currentQuestionIndex && (
                 <>
-                  {isAnswerCorrect ? <p className=""> Correct!</p> : <p className=""> Wrong!</p>}
+                  {isAnswerCorrect ? <p className="text-center text-xl text-emerald-600 "> Correct!</p> : <p className="text-center text-xl text-rose-600"> Wrong!</p>}
                   <div>
                     <p className="text-center text-xl">
-                      Correct answer:{" "}
+                      The Correct answer:{" "}
                       {
                         currentQuestion.answers[
                           currentQuestion.correctAnswerIndex

@@ -82,78 +82,91 @@ const Navigation = () => {
               Community
             </NavLink>
             {User ? (
-              <div
-                className="dropdown-menu relative inline-block"
-                onClick={handleClickOutside}
-              >
-                {/* Dropdown toggle button */}
-                <button
-                  type="button"
-                  onClick={toggleMenu}
-                  className="flex items-center focus:outline-none"
-                  aria-label="toggle profile dropdown"
-                >
-                  <div className="w-8 h-8 overflow-hidden border-2 border-blue-800 rounded-full">
-                    <img
-                      src={User.picture}
-                      className="object-cover w-full h-full"
-                      alt="avatar"
-                    />
-                  </div>
-
-                  <h3 className="mx-2 text-gray-700  lg:hidden">
-                    {User.email}
-                  </h3>
-                </button>
-
-                {/* Dropdown menu */}
-                {isOpen && (
-                  <div
-                    onClick={() => setIsOpen(false)}
-                    className="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl "
-                  >
-                    <a onClick={()=>navigate("/Profile")} className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 ">
-                      your profile
-                    </a>
-
-                    <a
-                      onClick={() => navigate("/contact")}
-                      className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 "
-                    >
-                      Help
-                    </a>
-                    <a
-                      href="#"
-                      className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 "
-                    >
-                      Settings
-                    </a>
-                    <a
-                      href="#"
-                      className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 "
-                    >
-                      Sign Out
-                    </a>
-                  </div>
-                )}
-              </div>
-            ) : (
+            <div className="dropdown-menu relative inline-block">
+              {/* Dropdown toggle button */}
               <button
-              onClick={() => navigate("/login")}
-              className=" px-6 py-2.5  text-sm font-medium shadow-lg leading-5 text-center text-white capitalize bg-blue-800 rounded-lg hover:bg-blue-700 lg:mx-0 lg:w-auto focus:outline-none"
-            >
-              Sign in
-            </button>
-              //   <GoogleLogin
-              //   onSuccess={(credentialResponse) => {
-              //     const data = jwtDecode(credentialResponse.credential);
-              //     setUser(data);
-              //   }}
-              //   onError={() => {
-              //     console.log("Login Failed");
-              //   }}
-              // />
-            )}
+                type="button"
+                onClick={toggleDropdown}
+                className="flex items-center focus:outline-none"
+                aria-label="toggle profile dropdown"
+              >
+                <div className="w-8 h-8 overflow-hidden border-2 border-blue-800 rounded-full ">
+                  <img
+                    src={User.picture}
+                    className="object-cover w-full h-full"
+                    alt="avatar"
+                  />
+                </div>
+
+                <h3 className="mx-2 text-gray-700  lg:hidden">
+                  {User.email}
+                </h3>
+              </button>
+
+              {/* Dropdown menu */}
+              {Isdown && (
+                <div
+                  onClick={() => setIsOpen(false)}
+                  className="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl "
+                >
+                  <div className="py-3">
+                      <h1 className =" text-center   text-sm font-semibold text-gray-700 ">
+                    {User.name}
+                  </h1>
+                  <p className="text-center  text-sm text-grey-800 capitalize transition-colors duration-300 transform  ">
+                  {User.email}
+                  </p>
+
+                  </div>
+                
+                  <hr className="border-gray-200 " />
+
+                  <a
+                    onClick={() => navigate("/Profile")}
+                    className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 "
+                  >
+                    your profile
+                  </a>
+
+                  <a
+                    onClick={() => navigate("/contact")}
+                    className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 "
+                  >
+                    Help
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 "
+                  >
+                    Settings
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform  hover:bg-gray-100 "
+                  >
+                    Sign Out
+                  </a>
+                </div>
+              )}
+            </div>
+            ) : (
+            //   <button
+            //   onClick={() => navigate("/login")}
+            //   className=" px-6 py-2.5  text-sm font-medium shadow-lg leading-5 text-center text-white capitalize bg-blue-800 rounded-lg hover:bg-blue-700 lg:mx-0 lg:w-auto focus:outline-none"
+            // >
+            //   Sign in
+            // </button>
+                <GoogleLogin
+                onSuccess={(credentialResponse) => {
+                  const data = jwtDecode(credentialResponse.credential);
+                  setUser(data);
+                }}
+                onError={() => {
+                  console.log("Login Failed");
+                }}
+                
+              />
+            )} 
           </nav>
         </div>
       </div>
