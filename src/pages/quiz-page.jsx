@@ -56,7 +56,7 @@ const QuizPage = () => {
   const handleAnswerSubmission = (selectedAnswerIndex) => {
     const currentQuestion = questions[currentQuestionIndex];
     const correctAnswerIndex = currentQuestion.correctAnswerIndex;
-    
+
     if (selectedAnswerIndex === correctAnswerIndex) {
       setIsAnswerCorrect(true);
     } else {
@@ -82,28 +82,34 @@ const QuizPage = () => {
     const currentQuestion = questions[currentQuestionIndex];
 
     return (
-      <div className="flex justify-center items-center h-screen bg-slate-100">
-        <div className="flex flex-col gap-4 md:w-9/12 w-full shadow-2xl bg-white p-8 h-4/5 rounded-lg ">
+      <div className="flex justify-center items-center min-h-screen bg-slate-100">
+        <div className="flex flex-col gap-4 md:w-9/12 w-full max-w-2xl shadow-2xl bg-white p-8 rounded-lg">
           <div className="flex items-center m-6">
             <BackButton />
           </div>
-          <div className="flex h-full content-center gap-5">
-            <div className="flex-col space-y-5 justify-center bg-blue-800 shadow-xl shadow-blue-800 rounded-lg h-3/4 w-2/5 sm:w-1/2 ">
-              <div className="">
-                <p className="align-top text-center py-2 px-3 text-gray-300 text-xl">
+          <div className="flex flex-col md:flex-row gap-5">
+            <div className="flex-col space-y-5 justify-center bg-blue-800 shadow-xl shadow-blue-800 rounded-lg p-4 md:w-1/2 sm:w-3/4">
+              <div>
+                <p className="text-center py-2 px-3 text-gray-300 text-xl">
                   Question {currentQuestionIndex + 1}/{questions.length}
                 </p>
               </div>
               <div>
-                <p className="text-center py-2  px-4 text-white text-xl ">
+                <p className="text-center py-2 px-4 text-white text-xl">
                   {currentQuestion.questionText}
                 </p>
               </div>
             </div>
-            <div className=" flex flex-col gap-4 justify-center h-4/5 w-3/5 items-center rounded-lg sm:w-full">
+            <div className="flex flex-col gap-4 justify-center w-full">
               {userAnswers.length > currentQuestionIndex && (
                 <>
-                  {isAnswerCorrect ? <p className="text-center text-xl text-emerald-600 "> Correct!</p> : <p className="text-center text-xl text-rose-600"> Wrong!</p>}
+                  {isAnswerCorrect ? (
+                    <p className="text-center text-xl text-emerald-600">
+                      Correct!
+                    </p>
+                  ) : (
+                    <p className="text-center text-xl text-rose-600">Wrong!</p>
+                  )}
                   <div>
                     <p className="text-center text-xl">
                       The Correct answer:{" "}
@@ -122,23 +128,26 @@ const QuizPage = () => {
                 </>
               )}
               {userAnswers.length <= currentQuestionIndex && (
-                <ul className="space-y-5  p-4">
+                <ul className="space-y-5 p-4">
                   {currentQuestion.answers.map((answer, index) => (
                     <li className="px-2 py-3" key={index}>
-                      <label>
-                        <input
-                          type="radio"
-                          name="answer"
-                          className="form-radio"
-                          onClick={() => handleAnswerSubmission(index)}
-                        />
-                        <span className="ml-2 text-xl">{answer}</span>
+                      <label htmlFor={`answer-${index}`}>
+                        <div className="flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700">
+                          <input
+                            id={`answer-${index}`}
+                            type="radio"
+                            name="answer"
+                            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                            onClick={() => handleAnswerSubmission(index)}
+                          />
+                          <span className="ml-2 text-xl">{answer}</span>
+                        </div>
                       </label>
                     </li>
                   ))}
                 </ul>
               )}
-              <div className="flex items-center">
+              <div className="flex items-center justify-center">
                 <button
                   onClick={handleNextQuestion}
                   className="px-5 py-2 m-3 text-sm tracking-wider text-white uppercase transition-colors duration-700 transform bg-blue-800 rounded-lg lg:w-auto focus:outline-none focus:bg-blue-700"
