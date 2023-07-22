@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^4.23.1",
     "@headlessui/react": "^1.7.15",
     "@react-oauth/google": "^0.11.0",
     "@sanity/block-content-to-react": "^3.0.0",
