@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Lottie from "lottie-react";
-import animationdata from "../assets/116568-comunnity-manager.json";
+import animationdata from "../assets/community2.0.json";
 
 const LandingPage = () => {
   const navigate = useNavigate();
