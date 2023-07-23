@@ -1,8 +1,7 @@
 import React, { useState, Fragment } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../components/logo";
-import { GoogleLogin } from "@react-oauth/google";
-import jwtDecode from "jwt-decode";
+import { UserButton, SignedIn, SignedOut } from "@clerk/clerk-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,7 +80,25 @@ const Navigation = () => {
             >
               Community
             </NavLink>
-           
+
+            <SignedIn>
+              <NavLink
+                className="px-4 py-2 mt-2 text-sm text-gray-800 md:mt-0 hover:text-blue-800 focus:outline-none focus:shadow-outline active:border-b-2 active:border-blue-800"
+                to="/profile"
+              >
+                Profile
+              </NavLink>
+            </SignedIn>
+            <SignedOut>
+              <NavLink
+                to="/forum"
+                className="px-4 py-2 mt-2 text-sm font-medium leading-5 text-center text-white capitalize bg-blue-800 rounded-lg hover:bg-blue-700 lg:mx-0 lg:w-auto focus:outline-none"
+              >
+                Sign In
+              </NavLink>
+            </SignedOut>
+
+            <UserButton />
           </nav>
         </div>
       </div>
