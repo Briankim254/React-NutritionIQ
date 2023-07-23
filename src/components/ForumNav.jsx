@@ -105,13 +105,21 @@ const ForumNavigation = () => {
             </div>
             
             <SignedOut>
+              <div className=" flex gap-4 ">
               <NavLink
-                to="/forum"
-                className="px-4 py-2 mt-2 text-sm font-medium leading-5 text-center text-white capitalize bg-blue-800 rounded-lg hover:bg-blue-700 lg:mx-0 lg:w-auto focus:outline-none"
+                to="/sign-in"
+                className="px-4 py-2  text-sm font-medium leading-5 text-center text-black capitalize bg-gray-200 rounded-lg hover:bg-gray-300 lg:mx-0 lg:w-auto focus:outline-none"
               >
                 Sign In
               </NavLink>
-            </SignedOut>
+              <NavLink
+                to="/sign-up"
+                className="px-4 py-2 text-sm font-medium leading-5 text-center text-white capitalize bg-blue-800 rounded-lg hover:bg-blue-700 lg:mx-0 lg:w-auto focus:outline-none"
+              >
+                Sign up
+              </NavLink>
+              </div>
+            </SignedOut>      
             <UserButton />
           </div>
         </div>
