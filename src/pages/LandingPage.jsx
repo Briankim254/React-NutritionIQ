@@ -22,7 +22,7 @@ const LandingPage = () => {
             </h5>
             <p className="mb-5 text-gray-800">
               <span className="font-bold text-blue-800">
-                Unlock Your Nutritional Potential{" "}
+                Unlock Your Nutritional Potential today{" "}
               </span>{" "}
               together with diabetics who are living healthier, happier lives
               with the help of our nutrition web app.
