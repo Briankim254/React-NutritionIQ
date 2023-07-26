@@ -38,33 +38,36 @@ function ClerkProviderWithRoutes() {
           <Route index element={<LandingPage />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/profile" element={
-            <>
-              <SignedIn>
-                <div className="flex pt-9 items-center justify-center">
-                <UserProfile />
-                </div>
-              </SignedIn>
-              <SignedOut>
-                <RedirectToSignIn />
-              </SignedOut>
-            </>
-          }
+          <Route
+            path="/profile"
+            element={
+              <>
+                <SignedIn>
+                  <div className="flex pt-9 items-center justify-center">
+                    <UserProfile />
+                  </div>
+                </SignedIn>
+                <SignedOut>
+                  <RedirectToSignIn />
+                </SignedOut>
+              </>
+            }
           />
         </Route>
         <Route
           path="/sign-in/*"
           element={
             <div className="flex  items-center justify-center">
-          <SignIn routing="path" path="/sign-in" />
-          </div>}
+              <SignIn routing="path" path="/sign-in" />
+            </div>
+          }
         />
         <Route
           path="/sign-up/*"
           element={
             <div className="flex  items-center justify-center">
-          <SignUp routing="path" path="/sign-up" />
-          </div>
+              <SignUp routing="path" path="/sign-up" />
+            </div>
           }
         />
         <Route
@@ -80,7 +83,7 @@ function ClerkProviderWithRoutes() {
             </>
           }
         />
-        
+
         <Route path="quiz/:questionIndex" element={<QuizPage />} />
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/quizcomponent" element={<QuizComponent />} />

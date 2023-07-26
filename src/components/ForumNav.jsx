@@ -1,7 +1,12 @@
 import { useState } from "react";
 import Logo from "../components/logo";
 import { NavLink } from "react-router-dom";
-import { UserButton, SignedIn, SignInButton, SignedOut } from "@clerk/clerk-react";
+import {
+  UserButton,
+  SignedIn,
+  SignInButton,
+  SignedOut,
+} from "@clerk/clerk-react";
 
 const ForumNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -95,31 +100,31 @@ const ForumNavigation = () => {
                 Experts
               </a>
               <SignedIn>
-              <NavLink
-                className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 "
-                to="/profile"
-              >
-                Profile
-              </NavLink>
-            </SignedIn>
+                <NavLink
+                  className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0  hover:bg-gray-100 "
+                  to="/profile"
+                >
+                  Profile
+                </NavLink>
+              </SignedIn>
             </div>
-            
+
             <SignedOut>
               <div className=" flex gap-4 ">
-              <NavLink
-                to="/sign-in"
-                className="px-4 py-2  text-sm font-medium leading-5 text-center text-black capitalize bg-gray-200 rounded-lg hover:bg-gray-300 lg:mx-0 lg:w-auto focus:outline-none"
-              >
-                Sign In
-              </NavLink>
-              <NavLink
-                to="/sign-up"
-                className="px-4 py-2 text-sm font-medium leading-5 text-center text-white capitalize bg-blue-800 rounded-lg hover:bg-blue-700 lg:mx-0 lg:w-auto focus:outline-none"
-              >
-                Sign up
-              </NavLink>
+                <NavLink
+                  to="/sign-in"
+                  className="px-4 py-2  text-sm font-medium leading-5 text-center text-black capitalize bg-gray-200 rounded-lg hover:bg-gray-300 lg:mx-0 lg:w-auto focus:outline-none"
+                >
+                  Sign In
+                </NavLink>
+                <NavLink
+                  to="/sign-up"
+                  className="px-4 py-2 text-sm font-medium leading-5 text-center text-white capitalize bg-blue-800 rounded-lg hover:bg-blue-700 lg:mx-0 lg:w-auto focus:outline-none"
+                >
+                  Sign up
+                </NavLink>
               </div>
-            </SignedOut>      
+            </SignedOut>
             <UserButton />
           </div>
         </div>

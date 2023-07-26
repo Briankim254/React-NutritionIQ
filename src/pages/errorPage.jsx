@@ -1,8 +1,8 @@
 import React from "react";
-import {Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 
 const NotFoundPage = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <section className="bg-white ">
       <div className="container min-h-screen px-6 py-12 mx-auto lg:flex lg:items-center lg:gap-12">
@@ -17,8 +17,9 @@ const NotFoundPage = () => {
           </p>
 
           <div className="flex items-center mt-6 gap-x-3">
-            <button className="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg gap-x-2 sm:w-auto   hover:bg-gray-100 "
-            onClick={() => navigate(-1)}
+            <button
+              className="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg gap-x-2 sm:w-auto   hover:bg-gray-100 "
+              onClick={() => navigate(-1)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +38,10 @@ const NotFoundPage = () => {
               <span>Go back</span>
             </button>
 
-            <Link to="/" className="w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-800 rounded-lg shrink-0 sm:w-auto hover:bg-blue-700 ">
+            <Link
+              to="/"
+              className="w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-800 rounded-lg shrink-0 sm:w-auto hover:bg-blue-700 "
+            >
               Take me home
             </Link>
           </div>

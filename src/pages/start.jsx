@@ -52,8 +52,8 @@ const StartPage = () => {
                 Are you ready to embark on an exciting journey to enhance your
                 nutritional knowledge and empower yourself in managing diabetes?
                 It's time to unleash your nutrition superpowers. Click the
-                "Start" button below to unlock your nutritional potential.
-                Dive into our comprehensive quiz designed for both novice or
+                "Start" button below to unlock your nutritional potential. Dive
+                into our comprehensive quiz designed for both novice or
                 knowlagable domain individuals.
               </p>
 

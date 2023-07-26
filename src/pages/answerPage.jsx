@@ -2,8 +2,6 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import BackButton from "../components/BackBtn";
 
-
-
 const Answer = () => {
   const navigate = useNavigate();
 
@@ -46,9 +44,7 @@ const Answer = () => {
           </div>
           <div className=" flex flex-col gap-8 justify-center h-4/5 w-3/5 items-center  rounded-lg">
             <div>
-              <p>
-                {isAnswerCorrect ? "Correct!" : "Wrong!"}
-              </p>
+              <p>{isAnswerCorrect ? "Correct!" : "Wrong!"}</p>
             </div>
             <div>
               <p>{currentQuestion.explanation}</p>
@@ -58,7 +54,9 @@ const Answer = () => {
                 onClick={handleNextQuestion}
                 className="w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-700  transform bg-gradient-to-br from-yellow-400 to-pink-500 hover:from-emerald-500 hover:to-blue-500 rounded-lg lg:w-auto  focus:outline-none focus:bg-blue-700"
               >
-                {currentQuestionIndex < questions.length - 1 ? "Next Question" : "Finish"}
+                {currentQuestionIndex < questions.length - 1
+                  ? "Next Question"
+                  : "Finish"}
               </button>
             </div>
           </div>

@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Logo from '../components/logo';
-import jwtDecode from 'jwt-decode';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../components/logo";
+import jwtDecode from "jwt-decode";
 import { GoogleLogin } from "@react-oauth/google";
-
 
 const SignupForm = () => {
   const [user, setUser] = useState([]);
   const [profile, setProfile] = useState([]);
-
-  
 
   console.log(user);
   return (
@@ -24,14 +21,12 @@ const SignupForm = () => {
             Create your account
           </h1>
 
-
-
           <div className="flex items-center justify-center mt-6 mx-2">
             <GoogleLogin
               onSuccess={(credentialResponse) => {
-              const data = jwtDecode(credentialResponse.credential);  
-              setUser(data);
-              setProfile(data.profileObj);
+                const data = jwtDecode(credentialResponse.credential);
+                setUser(data);
+                setProfile(data.profileObj);
               }}
               onError={() => {
                 console.log("sign up Failed");
@@ -52,6 +47,6 @@ const SignupForm = () => {
       </div>
     </>
   );
-}
+};
 
 export default SignupForm;

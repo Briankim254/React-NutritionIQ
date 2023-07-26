@@ -69,19 +69,17 @@ const LandingPage = () => {
             </h2>
 
             <p className="block max-w-2xl mt-4 text-gray-500 ">
-            Welcome to Nutrition IQ! Our smart app helps you make healthier food choices and
-            provides personalized nutrition recommendations based on your preferences and goals.
-            Whether you want to lose weight, maintain a balanced diet, or just eat healthier, our
-            app has got you covered!
+              Our smart app helps you make healthier food choices and provides
+              personalized nutrition recommendations based on your preferences
+              and goals. Whether you want to lose weight, maintain a balanced
+              diet, or just eat healthier, our app has got you covered!
             </p>
 
             <div className="mt-6 sm:-mx-2">
               <Link
-              to={"/forum"}
+                to={"/forum"}
                 className="inline-flex items-center justify-center w-full px-4 text-sm py-2.5 overflow-hidden text-black transition-colors duration-300 bg-gray-200 rounded-lg shadow sm:w-auto sm:mx-2 hover:bg-gray-300   focus:ring focus:ring-gray-300 focus:ring-opacity-80"
               >
-                
-
                 <span className="mx-2">Contribute on forum</span>
               </Link>
 
@@ -89,8 +87,6 @@ const LandingPage = () => {
                 to={"/startquiz"}
                 className="inline-flex items-center justify-center w-full px-4 text-sm py-2.5 mt-4 overflow-hidden text-white transition-colors duration-300 bg-blue-800 rounded-lg shadow sm:w-auto sm:mx-2 sm:mt-0 hover:bg-blue-700 focus:ring focus:ring-blue-300 focus:ring-opacity-80"
               >
-               
-
                 <span className="mx-2">Master Nutrition Quiz</span>
               </Link>
             </div>
@@ -130,7 +126,6 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      
     </>
   );
 };

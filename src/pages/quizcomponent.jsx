@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import sanityClient from '@sanity/client';
+import { useEffect, useState } from "react";
+import sanityClient from "@sanity/client";
 
 const client = sanityClient({
-    projectId: "d5ukluc6",
-    dataset: 'production',
+  projectId: "d5ukluc6",
+  dataset: "production",
   // Add any other required configuration options
 });
 
@@ -21,7 +21,7 @@ const QuizComponent = () => {
         const response = await client.fetch(query);
         setQuestions(response);
       } catch (error) {
-        console.error('Error fetching questions:', error);
+        console.error("Error fetching questions:", error);
       }
     };
 
@@ -62,13 +62,18 @@ const QuizComponent = () => {
         <ul>
           {currentQuestion.answers.map((answer, index) => (
             <li key={index}>
-              <button onClick={() => handleAnswerSubmission(index)}>{answer}</button>
+              <button onClick={() => handleAnswerSubmission(index)}>
+                {answer}
+              </button>
             </li>
           ))}
         </ul>
         {userAnswers.length > currentQuestionIndex && (
           <div>
-            <p>Your Answer: {currentQuestion.answers[userAnswers[currentQuestionIndex]]}</p>
+            <p>
+              Your Answer:{" "}
+              {currentQuestion.answers[userAnswers[currentQuestionIndex]]}
+            </p>
             <p>Explanation: {currentQuestion.explanation}</p>
           </div>
         )}
@@ -81,7 +86,11 @@ const QuizComponent = () => {
     );
   };
 
-  return <div>{questions.length > 0 ? renderCurrentQuestion() : <p>Loading...</p>}</div>;
+  return (
+    <div>
+      {questions.length > 0 ? renderCurrentQuestion() : <p>Loading...</p>}
+    </div>
+  );
 };
 
 export default QuizComponent;

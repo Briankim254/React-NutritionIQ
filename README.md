@@ -16,7 +16,7 @@ Make sure you have the following installed:
 
 - Node.js (version 14 or above)
 - npm (version 6 or above)
-  
+
 ## Table of Contents
 
 - [Technical description: Nutrition IQ Web Application](#technical-description-nutrition-iq-web-application)
@@ -50,9 +50,11 @@ cd nutrition-iq
 ```shell
 npm i
 ```
+
 or
+
 ```shell
-yarn 
+yarn
 ```
 
 4. Rename the `.env.example` file to `.env` if avilable, and configure any necessary environment variables, such as API keys or database credentials.
@@ -62,7 +64,9 @@ yarn
 ```shell
 npm run dev
 ```
+
 or
+
 ```shell
 yarn dev
 ```
@@ -102,6 +106,7 @@ git push origin feature/new-feature
 5. Open a pull request on the original repository, describing your changes and referencing any related issues.
 
 Once your pull request is submitted, it will be reviewed by the project maintainers. Thank you for your contributions!
+
 ## Acknowledgments
 
 We would like to express our gratitude to the following resources:
@@ -116,7 +121,6 @@ We would like to express our gratitude to the following resources:
 If you have any questions, feel free to reach out :
 
 - Kimutai Brian - kimutaibrian560@gmail.com
-
 
 ## License
 

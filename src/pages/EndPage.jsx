@@ -53,7 +53,8 @@ const EndPage = () => {
             <div className=" flex-col lg:justify-center lg:max-w-lg">
               <h1 className="text-3xl font-semibold  text-center text-gray-800  lg:text-4xl">
                 Congratulations! you have scored{" "}
-                <b className="text-blue-800">{score} out of 4</b> on the quiz!<br/> 
+                <b className="text-blue-800">{score} out of 4</b> on the quiz!
+                <br />
                 🎉
               </h1>
 
