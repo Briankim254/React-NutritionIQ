@@ -65,7 +65,7 @@ const LandingPage = () => {
 
           <div className="flex flex-col items-center mt-6 xl:items-start xl:w-1/2 xl:mt-0">
             <h2 className="text-2xl font-semibold tracking-tight text-gray-800 xl:text-3xl ">
-              Improve Your Nutrition with Our Brilliant App
+              Improve Your <b className="text-blue-800">Nutrition</b> with Our Brilliant App
             </h2>
 
             <p className="block max-w-2xl mt-4 text-gray-500 ">
