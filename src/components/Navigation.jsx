@@ -101,7 +101,7 @@ const Navigation = () => {
                 to="/sign-up"
                 className="px-4 py-2 text-sm font-medium leading-5 text-center text-white capitalize bg-blue-800 rounded-lg hover:bg-blue-700 lg:mx-0 lg:w-auto focus:outline-none"
               >
-                Sign up
+                Get Started
               </NavLink>
               </div>
             </SignedOut>
