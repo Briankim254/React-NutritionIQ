@@ -76,23 +76,23 @@ const LandingPage = () => {
             </p>
 
             <div className="mt-6 sm:-mx-2">
-              <a
-                href="#"
+              <Link
+              to={"/forum"}
                 className="inline-flex items-center justify-center w-full px-4 text-sm py-2.5 overflow-hidden text-black transition-colors duration-300 bg-gray-200 rounded-lg shadow sm:w-auto sm:mx-2 hover:bg-gray-300   focus:ring focus:ring-gray-300 focus:ring-opacity-80"
               >
                 
 
                 <span className="mx-2">Contribute on forum</span>
-              </a>
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                to={"/startquiz"}
                 className="inline-flex items-center justify-center w-full px-4 text-sm py-2.5 mt-4 overflow-hidden text-white transition-colors duration-300 bg-blue-800 rounded-lg shadow sm:w-auto sm:mx-2 sm:mt-0 hover:bg-blue-700 focus:ring focus:ring-blue-300 focus:ring-opacity-80"
               >
                
 
                 <span className="mx-2">Master Nutrition Quiz</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
