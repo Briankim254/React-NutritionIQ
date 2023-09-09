@@ -1,5 +1,4 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
-import React from "react";
 import QuizPage from "./pages/quiz-page";
 import Answer from "./pages/answerPage";
 import LandingPage from "./pages/LandingPage";
@@ -57,7 +56,7 @@ function ClerkProviderWithRoutes() {
         <Route
           path="/sign-in/*"
           element={
-            <div className="flex  items-center justify-center">
+            <div className="flex  items-center h-screen justify-center">
               <SignIn routing="path" path="/sign-in" />
             </div>
           }
@@ -65,7 +64,7 @@ function ClerkProviderWithRoutes() {
         <Route
           path="/sign-up/*"
           element={
-            <div className="flex  items-center justify-center">
+            <div className="flex  items-center h-screen justify-center">
               <SignUp routing="path" path="/sign-up" />
             </div>
           }
