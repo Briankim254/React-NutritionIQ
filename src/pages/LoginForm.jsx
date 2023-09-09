@@ -1,7 +1,6 @@
-import React from "react";
 import Logo from "../components/logo";
-import { Link, Navigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link,  } from "react-router-dom";
+import { useState,  } from "react";
 import { GoogleLogin } from "@react-oauth/google";
 import jwtDecode from "jwt-decode";
 

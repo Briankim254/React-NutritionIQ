@@ -56,7 +56,7 @@ function ClerkProviderWithRoutes() {
         <Route
           path="/sign-in/*"
           element={
-            <div className="flex  items-center h-screen justify-center">
+            <div className="flex  items-center h-screen justify-center bg-gradient-to-br from-emerald-400 to-blue-400">
               <SignIn routing="path" path="/sign-in" />
             </div>
           }
@@ -64,7 +64,7 @@ function ClerkProviderWithRoutes() {
         <Route
           path="/sign-up/*"
           element={
-            <div className="flex  items-center h-screen justify-center">
+            <div className="flex  items-center h-screen justify-center bg-gradient-to-br from-emerald-400 to-blue-400">
               <SignUp routing="path" path="/sign-up" />
             </div>
           }
