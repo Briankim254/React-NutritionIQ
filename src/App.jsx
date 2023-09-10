@@ -89,19 +89,7 @@ function ClerkProviderWithRoutes() {
         <Route path="/quiz/:questionIndex/answer" element={<Answer />} />
         <Route path="/startquiz" element={<StartPage />} />
         <Route path="/endquiz/:score" element={<EndPage />} />
-        <Route
-          path="/newsletter"
-          element={
-            <>
-              <SignedIn>
-                <NewsletterSection />
-              </SignedIn>
-              <SignedOut>
-                <RedirectToSignIn />
-              </SignedOut>
-            </>
-          }
-        />
+        <Route path="/newsletter" element={<NewsletterSection />}/>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </ClerkProvider>
