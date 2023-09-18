@@ -11,6 +11,7 @@ import EndPage from "./pages/EndPage";
 import QuizComponent from "./pages/quizcomponent";
 import NewsletterSection from "./pages/newsletter";
 import SharredLayout from "./components/SharredLayout";
+import Test from "./pages/Test";
 import {
   ClerkProvider,
   SignedIn,
@@ -56,7 +57,7 @@ function ClerkProviderWithRoutes() {
         <Route
           path="/sign-in/*"
           element={
-            <div className="flex  items-center h-screen justify-center bg-gradient-to-br from-emerald-400 to-blue-400">
+            <div className="flex  items-center h-screen justify-center bg-gradient-to-br from-blue-400 to-blue-900">
               <SignIn routing="path" path="/sign-in" />
             </div>
           }
@@ -64,7 +65,7 @@ function ClerkProviderWithRoutes() {
         <Route
           path="/sign-up/*"
           element={
-            <div className="flex  items-center h-screen justify-center bg-gradient-to-br from-emerald-400 to-blue-400">
+            <div className="flex  items-center h-screen justify-center bg-gradient-to-br from-blue-400 to-blue-900">
               <SignUp routing="path" path="/sign-up" />
             </div>
           }
@@ -84,6 +85,7 @@ function ClerkProviderWithRoutes() {
         />
 
         <Route path="quiz/:questionIndex" element={<QuizPage />} />
+        <Route path="/test" element={<Test />} />
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/quizcomponent" element={<QuizComponent />} />
         <Route path="/quiz/:questionIndex/answer" element={<Answer />} />
